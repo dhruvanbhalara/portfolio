@@ -50,19 +50,6 @@ class _DesktopPortfolioPageState extends State<DesktopPortfolioPage> {
             ),
           ),
           SizedBox(
-            width: 60,
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 100),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                workShowCaseImages(0.6 * height, 0.4 * width, kWorkImageUrl3),
-                workShowCaseImages(0.6 * height, 0.4 * width, kWorkImageUrl4),
-              ],
-            ),
-          ),
-          SizedBox(
             height: 60,
           ),
           viewAllWorkButtonWidget()
@@ -99,19 +86,6 @@ class _TabletPorfolioPageState extends State<TabletPortfolioPage> {
               children: [
                 workShowCaseImages(0.6 * height, 0.4 * width, kWorkImageUrl1),
                 workShowCaseImages(0.6 * height, 0.4 * width, kWorkImageUrl2),
-              ],
-            ),
-          ),
-          SizedBox(
-            width: 60,
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 100),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                workShowCaseImages(0.6 * height, 0.4 * width, kWorkImageUrl3),
-                workShowCaseImages(0.6 * height, 0.4 * width, kWorkImageUrl4),
               ],
             ),
           ),
@@ -153,14 +127,6 @@ class _MobilePortfolioPageState extends State<MobilePortfolioPage> {
             height: 20,
           ),
           workShowCaseImages(0.3 * height, 1 * width, kWorkImageUrl1),
-          SizedBox(
-            height: 20,
-          ),
-          workShowCaseImages(0.3 * height, 1 * width, kWorkImageUrl3),
-          SizedBox(
-            height: 20,
-          ),
-          workShowCaseImages(0.3 * height, 1 * width, kWorkImageUrl4),
           SizedBox(
             height: 20,
           ),

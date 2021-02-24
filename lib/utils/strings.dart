@@ -30,7 +30,8 @@ final String kCardDescription3 =
     'Experienced creating Amazing, Responsive Websites across different Screen Sizes';
 
 final String kDownloadCV = 'Download CV';
-final String kCvUrl = '';
+final String kCvUrl =
+    'https://drive.google.com/file/d/1CJw7LicwRMr-t42UxT7FelUxOwwF7mYu/view?usp=sharing';
 
 //final Strings for portfolio page
 final String kMyWork = 'My Work';

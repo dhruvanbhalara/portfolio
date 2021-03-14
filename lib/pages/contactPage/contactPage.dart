@@ -30,7 +30,7 @@ class _DesktopContactPageState extends State<DesktopContactPage> {
   var width;
   var height;
   var utilityProvider;
-  ScrollController scrollController;
+  late ScrollController scrollController;
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +81,7 @@ class _TabletContactPageState extends State<TabletContactPage> {
   var width;
   var height;
   var utilityProvider;
-  ScrollController scrollController;
+  late ScrollController scrollController;
 
   @override
   Widget build(BuildContext context) {
@@ -132,7 +132,7 @@ class _MobileContactPageState extends State<MobileContactPage> {
   var width;
   var height;
   var utilityProvider;
-  ScrollController scrollController;
+  late ScrollController scrollController;
 
   @override
   Widget build(BuildContext context) {
@@ -363,7 +363,7 @@ Widget navBarItems(ScrollController scrollController) {
   );
 }
 
-Widget navBarOptions(String title, int position, Function function) {
+Widget navBarOptions(String title, int position, Function() function) {
   return InkWell(
     onTap: function,
     hoverColor: Colors.grey[200],

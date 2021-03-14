@@ -13,7 +13,7 @@ class PortfolioApp extends StatefulWidget {
 }
 
 class _PortfolioAppState extends State<PortfolioApp> {
-  UtilityProvider utilityProvider;
+  late UtilityProvider utilityProvider;
   @override
   Widget build(BuildContext context) {
     utilityProvider = Provider.of<UtilityProvider>(context);

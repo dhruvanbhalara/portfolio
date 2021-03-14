@@ -126,7 +126,7 @@ class _MobilePortfolioPageState extends State<MobilePortfolioPage> {
           SizedBox(
             height: 20,
           ),
-          workShowCaseImages(0.3 * height, 1 * width, kWorkImageUrl1),
+          workShowCaseImages(0.3 * height, (1 * width).toDouble(), kWorkImageUrl1),
           SizedBox(
             height: 20,
           ),

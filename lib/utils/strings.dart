@@ -31,7 +31,7 @@ final String kCardDescription3 =
 
 final String kDownloadCV = 'Download CV';
 final String kCvUrl =
-    'https://drive.google.com/file/d/1CJw7LicwRMr-t42UxT7FelUxOwwF7mYu/view?usp=sharing';
+    'https://drive.google.com/file/d/19Rjk4TGHMJyAD838OHn2Qo4twiItyxfg/view?usp=sharing';
 
 //final Strings for portfolio page
 final String kMyWork = 'My Work';

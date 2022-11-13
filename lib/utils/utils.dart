@@ -1,9 +1,9 @@
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher.dart' as launcher;
 
 launchUrl(String obtainedUrl) async {
-  final String url = obtainedUrl;
-  if (await canLaunch(url)) {
-    await launch(url);
+  final Uri url = Uri.parse(obtainedUrl);
+  if (await launcher.canLaunchUrl(url)) {
+    await launcher.launchUrl(url);
   } else {
     throw 'Could not launch $url';
   }

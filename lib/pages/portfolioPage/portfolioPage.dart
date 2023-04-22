@@ -126,7 +126,8 @@ class _MobilePortfolioPageState extends State<MobilePortfolioPage> {
           SizedBox(
             height: 20,
           ),
-          workShowCaseImages(0.3 * height, (1 * width).toDouble(), kWorkImageUrl1),
+          workShowCaseImages(
+              0.3 * height, (1 * width).toDouble(), kWorkImageUrl1),
           SizedBox(
             height: 20,
           ),
@@ -144,7 +145,8 @@ Widget mySelectedWorkWidget(double fontSize) {
   );
 }
 
-Widget workShowCaseImages(double imageHeight, double imageWidth, String imageUrl) {
+Widget workShowCaseImages(
+    double imageHeight, double imageWidth, String imageUrl) {
   return Material(
     color: Colors.white,
     borderRadius: BorderRadius.circular(8),
@@ -173,9 +175,9 @@ Widget viewAllWorkButtonWidget() {
         style: TextStyle(color: Colors.white),
       ),
       onPressed: () async {
-        final url = kViewAllWorkLink;
-        if (await canLaunch(url)) {
-          await launch(url);
+        final url = Uri.parse(kViewAllWorkLink);
+        if (await canLaunchUrl(url)) {
+          await launchUrl(url);
         } else {
           throw 'Could not launch $url';
         }

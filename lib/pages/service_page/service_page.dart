@@ -98,15 +98,12 @@ class _DesktopServicesPageState extends State<DesktopServicesPage> {
           const SizedBox(
             height: 80,
           ),
-          Row(
+          Column(
             //mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 40),
-                child: whoIAmWidget(45),
-              ),
-              SizedBox(
-                width: 0.20 * width,
+              whoIAmWidget(45),
+              const SizedBox(
+                height: 30,
               ),
               whoIamDetailsWidget(80)
             ],
@@ -190,6 +187,9 @@ class _TabletServicesPageState extends State<TabletServicesPage> {
           Column(
             children: [
               whoIAmWidget(30),
+              const SizedBox(
+                height: 30,
+              ),
               whoIamDetailsWidget(40),
             ],
           ),
@@ -256,6 +256,9 @@ class _MobileServicesPageState extends State<MobileServicesPage> {
             height: 30,
           ),
           whoIAmWidget(30),
+          const SizedBox(
+            height: 30,
+          ),
           whoIamDetailsWidget(30)
         ],
       ),
@@ -360,84 +363,81 @@ Widget whoIAmWidget(double fontSize) {
 }
 
 Widget whoIamDetailsWidget(double spaceAfterCards) {
-  return Container(
-    margin: EdgeInsets.only(top: spaceAfterCards),
-    width: 600,
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          AppLocalization.current.kWhoIamDetails,
-          textAlign: TextAlign.left,
-          style: const TextStyle(
-            letterSpacing: 0.5,
-            fontSize: 14,
-            color: Colors.blueGrey,
-            fontWeight: FontWeight.w500,
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Text(
+        AppLocalization.current.kWhoIamDetails,
+        textAlign: TextAlign.center,
+        style: const TextStyle(
+          letterSpacing: 0.5,
+          fontSize: 14,
+          color: Colors.blueGrey,
+          fontWeight: FontWeight.w500,
+        ),
+      ),
+      const SizedBox(
+        height: 30,
+      ),
+      Center(
+        child: MaterialButton(
+          hoverElevation: 10,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(40),
           ),
+          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          color: Colors.red[400],
+          child: Text(
+            AppLocalization.current.kDownloadCV,
+            style: const TextStyle(color: Colors.white),
+          ),
+          onPressed: () => launchUrl(kCvUrl),
         ),
-        const SizedBox(
-          height: 30,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            MaterialButton(
-              hoverElevation: 10,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(40),
-              ),
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-              color: Colors.red[400],
-              child: Text(
-                AppLocalization.current.kDownloadCV,
-                style: const TextStyle(color: Colors.white),
-              ),
-              onPressed: () => launchUrl(kCvUrl),
-            ),
-            const SizedBox(
-              width: 40,
-            ),
-            const SocialMediaInfoWidget(
-              iconPath: Res.github,
-              url: kGithubURL,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            const SocialMediaInfoWidget(
-              iconPath: Res.linkedin,
-              url: kLinkedInURL,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            const SocialMediaInfoWidget(
-              iconPath: Res.twitter,
-              url: kTwitterURL,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            const SocialMediaInfoWidget(
-              iconPath: Res.instagram,
-              url: kInstagramURL,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            const SocialMediaInfoWidget(
-              iconPath: Res.facebook,
-              url: kFacebookURL,
-            ),
-          ],
-        ),
-        const SizedBox(
-          height: 30,
-        ),
-      ],
-    ),
+      ),
+      const SizedBox(
+        height: 30,
+      ),
+      const Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SocialMediaInfoWidget(
+            iconPath: Res.github,
+            url: kGithubURL,
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          SocialMediaInfoWidget(
+            iconPath: Res.linkedin,
+            url: kLinkedInURL,
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          SocialMediaInfoWidget(
+            iconPath: Res.twitter,
+            url: kTwitterURL,
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          SocialMediaInfoWidget(
+            iconPath: Res.instagram,
+            url: kInstagramURL,
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          SocialMediaInfoWidget(
+            iconPath: Res.facebook,
+            url: kFacebookURL,
+          ),
+        ],
+      ),
+      const SizedBox(
+        height: 30,
+      ),
+    ],
   );
 }
 
@@ -491,7 +491,8 @@ Widget whatIdoCardMobile(
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(16),
+                      padding:
+                          const EdgeInsets.only(left: 16, top: 16, right: 16),
                       child: Text(
                         description,
                         textAlign: TextAlign.left,

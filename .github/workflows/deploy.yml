@@ -1,4 +1,4 @@
-name: CI
+name: Build and Deploy to Netlify
 
 on:
   push:
@@ -38,10 +38,12 @@ jobs:
       - name: Build web app
         run: flutter build web
 
-      - name: Deploy production to Netlify
-        uses: jsmrcaga/action-netlify-deploy@v2.0.0
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.1
         with:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_DEPLOY_TO_PROD: true
-          build_directory: "./build/web"
+          publish-dir: './build/web'
+          production-branch: master
+          production-deploy: true
+          env:
+            NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+            NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

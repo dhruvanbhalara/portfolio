@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/utils/utils.dart';
 
-class SocialMediaContactInfo extends StatelessWidget {
+class SocialMediaInfoWidget extends StatelessWidget {
   final String url, iconPath;
 
-  const SocialMediaContactInfo({Key? key, required this.url, required this.iconPath})
-      : super(key: key);
+  const SocialMediaInfoWidget({
+    Key? key,
+    required this.url,
+    required this.iconPath,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

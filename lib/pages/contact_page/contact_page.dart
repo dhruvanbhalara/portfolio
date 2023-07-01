@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/providers/utility_provider.dart';
 import 'package:portfolio/res.dart';
 import 'package:portfolio/utils/strings.dart';
-import 'package:portfolio/widget/socialMediaInfo.dart';
+import 'package:portfolio/widget/social_media_info_widget.dart';
 import 'package:provider/provider.dart';
 
 class ContactPage extends StatelessWidget {
@@ -174,8 +174,8 @@ class _MobileContactPageState extends State<MobileContactPage> {
   }
 }
 
-Widget emailContactWidget(
-    double height, double width, double sayHelloFontSize, double emailIDFontSize) {
+Widget emailContactWidget(double height, double width, double sayHelloFontSize,
+    double emailIDFontSize) {
   return Material(
     elevation: 15,
     color: Colors.white,
@@ -234,35 +234,35 @@ Widget iconBarWidget() {
     mainAxisAlignment: MainAxisAlignment.center,
     mainAxisSize: MainAxisSize.max,
     children: [
-      SocialMediaContactInfo(
+      SocialMediaInfoWidget(
         iconPath: Res.github,
         url: kGithubURL,
       ),
       SizedBox(
         width: 20,
       ),
-      SocialMediaContactInfo(
+      SocialMediaInfoWidget(
         iconPath: Res.linkedin,
         url: kLinkedInURL,
       ),
       SizedBox(
         width: 20,
       ),
-      SocialMediaContactInfo(
+      SocialMediaInfoWidget(
         iconPath: Res.twitter,
         url: kTwitterURL,
       ),
       SizedBox(
         width: 20,
       ),
-      SocialMediaContactInfo(
+      SocialMediaInfoWidget(
         iconPath: Res.instagram,
         url: kInstagramURL,
       ),
       SizedBox(
         width: 20,
       ),
-      SocialMediaContactInfo(
+      SocialMediaInfoWidget(
         iconPath: Res.facebook,
         url: kFacebookURL,
       ),
@@ -373,7 +373,8 @@ Widget navBarOptions(String title, int position, Function() function) {
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
       child: Text(
         title,
-        style: GoogleFonts.poppins(color: Colors.black, fontSize: 12, fontWeight: FontWeight.w600),
+        style: GoogleFonts.poppins(
+            color: Colors.black, fontSize: 12, fontWeight: FontWeight.w600),
       ),
     ),
   );

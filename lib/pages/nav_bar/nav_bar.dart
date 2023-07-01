@@ -174,7 +174,8 @@ Widget navBarOptions(String title, int position, Function() function) {
       child: Text(
         title,
         // style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        style: GoogleFonts.poppins(color: Colors.black, fontSize: 12, fontWeight: FontWeight.w600),
+        style: GoogleFonts.poppins(
+            color: Colors.black, fontSize: 12, fontWeight: FontWeight.w600),
       ),
     ),
   );

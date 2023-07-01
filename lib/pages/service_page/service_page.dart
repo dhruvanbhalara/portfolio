@@ -3,7 +3,7 @@ import 'package:portfolio/providers/utility_provider.dart';
 import 'package:portfolio/res.dart';
 import 'package:portfolio/utils/strings.dart';
 import 'package:portfolio/utils/utils.dart';
-import 'package:portfolio/widget/socialMediaInfo.dart';
+import 'package:portfolio/widget/social_media_info_widget.dart';
 import 'package:provider/provider.dart';
 
 class ServicesPage extends StatelessWidget {
@@ -52,12 +52,39 @@ class _DesktopServicesPageState extends State<DesktopServicesPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              whatIDoCard(Colors.yellowAccent.withOpacity(0.4), Res.pen, kCardTitle1,
-                  kCardDescription1, width, height, 0.22 * width, 400, 18, 14),
-              whatIDoCard(Colors.tealAccent.withOpacity(0.4), Res.mob_dev, kCardTitle2,
-                  kCardDescription2, width, height, 0.22 * width, 400, 18, 14),
-              whatIDoCard(Colors.redAccent.withOpacity(0.4), Res.web, kCardTitle3,
-                  kCardDescription3, width, height, 0.22 * width, 400, 18, 14),
+              whatIDoCard(
+                  Colors.yellowAccent.withOpacity(0.4),
+                  Res.pen,
+                  kCardTitle1,
+                  kCardDescription1,
+                  width,
+                  height,
+                  0.22 * width,
+                  400,
+                  18,
+                  14),
+              whatIDoCard(
+                  Colors.tealAccent.withOpacity(0.4),
+                  Res.mob_dev,
+                  kCardTitle2,
+                  kCardDescription2,
+                  width,
+                  height,
+                  0.22 * width,
+                  400,
+                  18,
+                  14),
+              whatIDoCard(
+                  Colors.redAccent.withOpacity(0.4),
+                  Res.web,
+                  kCardTitle3,
+                  kCardDescription3,
+                  width,
+                  height,
+                  0.22 * width,
+                  400,
+                  18,
+                  14),
             ],
           ),
           SizedBox(
@@ -110,12 +137,39 @@ class _TabletServicesPageState extends State<TabletServicesPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              whatIDoCard(Colors.yellowAccent.withOpacity(0.4), Res.pen, kCardTitle1,
-                  kCardDescription1, width, height, 0.3 * width, 400, 14, 12),
-              whatIDoCard(Colors.tealAccent.withOpacity(0.4), Res.mob_dev, kCardTitle2,
-                  kCardDescription2, width, height, 0.3 * width, 400, 14, 12),
-              whatIDoCard(Colors.redAccent.withOpacity(0.4), Res.web, kCardTitle3,
-                  kCardDescription3, width, height, 0.3 * width, 400, 14, 12),
+              whatIDoCard(
+                  Colors.yellowAccent.withOpacity(0.4),
+                  Res.pen,
+                  kCardTitle1,
+                  kCardDescription1,
+                  width,
+                  height,
+                  0.3 * width,
+                  400,
+                  14,
+                  12),
+              whatIDoCard(
+                  Colors.tealAccent.withOpacity(0.4),
+                  Res.mob_dev,
+                  kCardTitle2,
+                  kCardDescription2,
+                  width,
+                  height,
+                  0.3 * width,
+                  400,
+                  14,
+                  12),
+              whatIDoCard(
+                  Colors.redAccent.withOpacity(0.4),
+                  Res.web,
+                  kCardTitle3,
+                  kCardDescription3,
+                  width,
+                  height,
+                  0.3 * width,
+                  400,
+                  14,
+                  12),
             ],
           ),
           SizedBox(
@@ -197,7 +251,8 @@ class _MobileServicesPageState extends State<MobileServicesPage> {
 }
 
 Widget whatIDoWidget(double fontSize) {
-  return Text(kWhatIdo, style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.w600));
+  return Text(kWhatIdo,
+      style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.w600));
 }
 
 Widget whatIDoCard(
@@ -220,7 +275,8 @@ Widget whatIDoCard(
       width: cardWidth,
       height: cardHeight,
       decoration: BoxDecoration(
-          border: Border.all(width: 0.2, color: Colors.white12, style: BorderStyle.solid),
+          border: Border.all(
+              width: 0.2, color: Colors.white12, style: BorderStyle.solid),
           borderRadius: BorderRadius.circular(8)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -252,7 +308,8 @@ Widget whatIDoCard(
           Text(
             title,
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: cardTitleTextSize, fontWeight: FontWeight.w700),
+            style: TextStyle(
+                fontSize: cardTitleTextSize, fontWeight: FontWeight.w700),
           ),
           SizedBox(
             height: 20,
@@ -309,7 +366,8 @@ Widget whoIamDetailsWidget(double spaceAfterCards) {
           children: [
             MaterialButton(
               hoverElevation: 10,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(40)),
               padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
               color: Colors.red[400],
               child: Text(
@@ -321,35 +379,35 @@ Widget whoIamDetailsWidget(double spaceAfterCards) {
             SizedBox(
               width: 40,
             ),
-            SocialMediaContactInfo(
+            SocialMediaInfoWidget(
               iconPath: Res.github,
               url: kGithubURL,
             ),
             SizedBox(
               width: 10,
             ),
-            SocialMediaContactInfo(
+            SocialMediaInfoWidget(
               iconPath: Res.linkedin,
               url: kLinkedInURL,
             ),
             SizedBox(
               width: 10,
             ),
-            SocialMediaContactInfo(
+            SocialMediaInfoWidget(
               iconPath: Res.twitter,
               url: kTwitterURL,
             ),
             SizedBox(
               width: 10,
             ),
-            SocialMediaContactInfo(
+            SocialMediaInfoWidget(
               iconPath: Res.instagram,
               url: kInstagramURL,
             ),
             SizedBox(
               width: 10,
             ),
-            SocialMediaContactInfo(
+            SocialMediaInfoWidget(
               iconPath: Res.facebook,
               url: kFacebookURL,
             ),
@@ -363,8 +421,8 @@ Widget whoIamDetailsWidget(double spaceAfterCards) {
   );
 }
 
-Widget whatIdoCardMobile(
-    double height, double width, Color color, String imagePath, String title, String description) {
+Widget whatIdoCardMobile(double height, double width, Color color,
+    String imagePath, String title, String description) {
   return Column(
     children: [
       Container(
@@ -400,7 +458,8 @@ Widget whatIdoCardMobile(
                       child: Text(
                         title,
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+                        style: TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.w700),
                       ),
                     ),
                     Padding(

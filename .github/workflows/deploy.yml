@@ -2,10 +2,8 @@ name: Build and Deploy to Netlify
 
 on:
   push:
-    branches:
-      - "*"
-    tags-ignore:
-      - v*
+    tags:
+      - '*'
 
 jobs:
   # Set up Flutter for all other tasks.

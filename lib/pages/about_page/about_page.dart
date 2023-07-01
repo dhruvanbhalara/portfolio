@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/utils/strings.dart';
 
 class AboutPage extends StatelessWidget {
@@ -111,21 +112,21 @@ Widget nameWidget(double nameFontSize, double descFontSize) {
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Text(
-        kHello,
+        AppLocalization.current.kHello,
         style: TextStyle(
           fontSize: nameFontSize,
           fontWeight: FontWeight.w600,
         ),
       ),
       Text(
-        kName,
+        AppLocalization.current.kName,
         style: TextStyle(
           fontSize: nameFontSize,
           fontWeight: FontWeight.w600,
         ),
       ),
       Text(
-        kDescription,
+        AppLocalization.current.kDescription,
         style: TextStyle(
           fontSize: descFontSize,
           color: Colors.blueGrey[400],

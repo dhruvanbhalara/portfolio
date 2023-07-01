@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/pages/portfolio_app.dart';
 import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
@@ -17,10 +18,14 @@ void main() {
         )
       ],
       child: MaterialApp(
-        title: 'Dhruvan Bhalara | Portfolio',
+        onGenerateTitle: (context) => AppLocalization.current.appName,
         theme: ThemeData(
           textTheme: GoogleFonts.poppinsTextTheme(),
         ),
+        localizationsDelegates: const [
+          AppLocalization.delegate,
+        ],
+        supportedLocales: AppLocalization.delegate.supportedLocales,
         home: PortfolioApp(),
       ),
     ),

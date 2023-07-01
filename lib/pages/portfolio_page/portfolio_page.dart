@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/utils/strings.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -44,8 +45,8 @@ class _DesktopPortfolioPageState extends State<DesktopPortfolioPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                workShowCaseImages(0.6 * height, 0.4 * width, kWorkImageUrl1),
-                workShowCaseImages(0.6 * height, 0.4 * width, kWorkImageUrl2),
+                workShowCaseImages(0.6 * height, 0.4 * width, kWorkImageUrl),
+                workShowCaseImages(0.6 * height, 0.4 * width, kWorkImageUrl),
               ],
             ),
           ),
@@ -84,8 +85,8 @@ class _TabletPorfolioPageState extends State<TabletPortfolioPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                workShowCaseImages(0.6 * height, 0.4 * width, kWorkImageUrl1),
-                workShowCaseImages(0.6 * height, 0.4 * width, kWorkImageUrl2),
+                workShowCaseImages(0.6 * height, 0.4 * width, kWorkImageUrl),
+                workShowCaseImages(0.6 * height, 0.4 * width, kWorkImageUrl),
               ],
             ),
           ),
@@ -127,7 +128,7 @@ class _MobilePortfolioPageState extends State<MobilePortfolioPage> {
             height: 20,
           ),
           workShowCaseImages(
-              0.3 * height, (1 * width).toDouble(), kWorkImageUrl1),
+              0.3 * height, (1 * width).toDouble(), kWorkImageUrl),
           SizedBox(
             height: 20,
           ),
@@ -140,7 +141,7 @@ class _MobilePortfolioPageState extends State<MobilePortfolioPage> {
 
 Widget mySelectedWorkWidget(double fontSize) {
   return Text(
-    kMyWork,
+    AppLocalization.current.kMyWork,
     style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
   );
 }
@@ -171,7 +172,7 @@ Widget viewAllWorkButtonWidget() {
       padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
       color: Colors.red[400],
       child: Text(
-        kViewAllWork,
+        AppLocalization.current.kViewAllWork,
         style: TextStyle(color: Colors.white),
       ),
       onPressed: () async {

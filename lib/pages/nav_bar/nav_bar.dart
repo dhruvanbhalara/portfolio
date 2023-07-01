@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/providers/utility_provider.dart';
-import 'package:portfolio/utils/strings.dart';
 import 'package:provider/provider.dart';
 
 class TopNavBar extends StatelessWidget {
@@ -104,7 +104,7 @@ Widget websiteIcon() {
           child: Padding(
             padding: const EdgeInsets.all(12.0),
             child: Text(
-              kIconFirstLetter,
+              AppLocalization.current.kIconFirstLetter,
               style: GoogleFonts.poppins(
                 color: Colors.red,
                 fontSize: 30,
@@ -114,7 +114,7 @@ Widget websiteIcon() {
           ),
         ),
         Text(
-          kIconRemainingLetters,
+          AppLocalization.current.kIconRemainingLetters,
           style: GoogleFonts.poppins(
             color: Colors.black,
             fontSize: 25,
@@ -131,28 +131,28 @@ Widget navBarItems(ScrollController scrollController) {
     // mainAxisSize: MainAxisSize.max,
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: [
-      navBarOptions(kAbout, 1, () {
+      navBarOptions(AppLocalization.current.kAbout, 1, () {
         scrollController.animateTo(
           scrollController.position.minScrollExtent + 120,
           duration: Duration(seconds: 1),
           curve: Curves.ease,
         );
       }),
-      navBarOptions(kServices, 2, () {
+      navBarOptions(AppLocalization.current.kServices, 2, () {
         scrollController.animateTo(
           0.30 * scrollController.position.maxScrollExtent,
           duration: Duration(seconds: 2),
           curve: Curves.ease,
         );
       }),
-      navBarOptions(kPortfolio, 3, () {
+      navBarOptions(AppLocalization.current.kPortfolio, 3, () {
         scrollController.animateTo(
           0.60 * scrollController.position.maxScrollExtent,
           duration: Duration(seconds: 2),
           curve: Curves.ease,
         );
       }),
-      navBarOptions(kContact, 4, () {
+      navBarOptions(AppLocalization.current.kContact, 4, () {
         scrollController.animateTo(
           1 * scrollController.position.maxScrollExtent,
           duration: Duration(seconds: 2),

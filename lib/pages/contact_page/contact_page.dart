@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/generated/l10n.dart';
+import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/providers/utility_provider.dart';
 import 'package:portfolio/res.dart';
 import 'package:portfolio/utils/strings.dart';
@@ -192,7 +194,7 @@ Widget emailContactWidget(double height, double width, double sayHelloFontSize,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            kContactCardTitle,
+            AppLocalization.current.kContactCardTitle,
             style: TextStyle(
               fontSize: sayHelloFontSize,
               color: Colors.grey,
@@ -220,7 +222,7 @@ Widget footerWidget() {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          kRightsReserved,
+          AppLocalization.current.kRightsReserved,
           textAlign: TextAlign.center,
           style: TextStyle(fontWeight: FontWeight.w600, fontSize: 12),
         )
@@ -295,7 +297,7 @@ Widget websiteIcon() {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              kIconFirstLetter,
+              AppLocalization.current.kIconFirstLetter,
               style: GoogleFonts.poppins(
                 color: Colors.red,
                 fontSize: 30,
@@ -305,7 +307,7 @@ Widget websiteIcon() {
           ),
         ),
         Text(
-          kIconRemainingLetters,
+          AppLocalization.current.kIconRemainingLetters,
           style: GoogleFonts.poppins(
             color: Colors.black,
             fontSize: 25,
@@ -322,7 +324,7 @@ Widget navBarItems(ScrollController scrollController) {
     // mainAxisSize: MainAxisSize.max,
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
-      navBarOptions(kAbout, 1, () {
+      navBarOptions(AppLocalization.current.kAbout, 1, () {
         scrollController.animateTo(
           scrollController.position.minScrollExtent + 120,
           duration: Duration(seconds: 1),
@@ -332,7 +334,7 @@ Widget navBarItems(ScrollController scrollController) {
       SizedBox(
         width: 40,
       ),
-      navBarOptions(kServices, 2, () {
+      navBarOptions(AppLocalization.current.kServices, 2, () {
         scrollController.animateTo(
           0.30 * scrollController.position.maxScrollExtent,
           duration: Duration(seconds: 2),
@@ -342,7 +344,7 @@ Widget navBarItems(ScrollController scrollController) {
       SizedBox(
         width: 40,
       ),
-      navBarOptions(kPortfolio, 3, () {
+      navBarOptions(AppLocalization.current.kPortfolio, 3, () {
         scrollController.animateTo(
           0.60 * scrollController.position.maxScrollExtent,
           duration: Duration(seconds: 2),
@@ -352,7 +354,7 @@ Widget navBarItems(ScrollController scrollController) {
       SizedBox(
         width: 40,
       ),
-      navBarOptions(kContact, 4, () {
+      navBarOptions(AppLocalization.current.kContact, 4, () {
         scrollController.animateTo(
           1 * scrollController.position.maxScrollExtent,
           duration: Duration(seconds: 2),

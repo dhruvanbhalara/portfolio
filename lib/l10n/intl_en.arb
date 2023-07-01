@@ -1,0 +1,31 @@
+{
+  "@@locale": "en",
+  "appName":"Dhruvan Bhalara | Portfolio",
+  "kAbout" : "About",
+  "kServices" : "Services",
+  "kPortfolio" : "Portfolio",
+  "kContact" : "Contact",
+  "kHello" : "Hello,",
+  "kName" : "I'm Dhruvan Bhalara",
+  "kDescription" : "Freelance Mobile Developer & Tech Enthusiast",
+  "kWhatIdo" : "What I Do",
+  "kCardTitle1" : "User Experience Design",
+  "kCardTitle2" : "Mobile App Development",
+  "kCardTitle3" : "Front-end Development",
+  "kWhoIam" : "Who I Am",
+  "kWhoIamDetails" :
+  "Experienced App Developer, love creating amazing Apps for Mobile && Web across different Screen Sizes, Fan of Amazing UI/UX && Open-Source Lover and Contributor",
+  "kCardDescription1" :
+  "I love creating UI and converting them into a amazing experiences using mobile and web technologies",
+  "kCardDescription2" :
+  "Experienced in creating robust and user friendly Mobile Apps for both Android and iOS Platforms",
+  "kCardDescription3" :
+  "Experienced creating Amazing, Responsive Websites across different Screen Sizes",
+  "kDownloadCV" : "Download CV",
+  "kMyWork" : "My Work",
+  "kViewAllWork" : "View All Work",
+  "kContactCardTitle" : "Have Any Project in Mind? Say Hello At",
+  "kIconFirstLetter" :  "  D  ",
+  "kIconRemainingLetters" :  " hruvan",
+  "kRightsReserved" : "© Dhruvan 2023. All rights reserved."
+}

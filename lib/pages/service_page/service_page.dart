@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/providers/utility_provider.dart';
 import 'package:portfolio/res.dart';
 import 'package:portfolio/utils/strings.dart';
@@ -55,8 +56,8 @@ class _DesktopServicesPageState extends State<DesktopServicesPage> {
               whatIDoCard(
                   Colors.yellowAccent.withOpacity(0.4),
                   Res.pen,
-                  kCardTitle1,
-                  kCardDescription1,
+                  AppLocalization.current.kCardTitle1,
+                  AppLocalization.current.kCardDescription1,
                   width,
                   height,
                   0.22 * width,
@@ -66,8 +67,8 @@ class _DesktopServicesPageState extends State<DesktopServicesPage> {
               whatIDoCard(
                   Colors.tealAccent.withOpacity(0.4),
                   Res.mob_dev,
-                  kCardTitle2,
-                  kCardDescription2,
+                  AppLocalization.current.kCardTitle2,
+                  AppLocalization.current.kCardDescription2,
                   width,
                   height,
                   0.22 * width,
@@ -77,8 +78,8 @@ class _DesktopServicesPageState extends State<DesktopServicesPage> {
               whatIDoCard(
                   Colors.redAccent.withOpacity(0.4),
                   Res.web,
-                  kCardTitle3,
-                  kCardDescription3,
+                  AppLocalization.current.kCardTitle3,
+                  AppLocalization.current.kCardDescription3,
                   width,
                   height,
                   0.22 * width,
@@ -140,8 +141,8 @@ class _TabletServicesPageState extends State<TabletServicesPage> {
               whatIDoCard(
                   Colors.yellowAccent.withOpacity(0.4),
                   Res.pen,
-                  kCardTitle1,
-                  kCardDescription1,
+                  AppLocalization.current.kCardTitle1,
+                  AppLocalization.current.kCardDescription1,
                   width,
                   height,
                   0.3 * width,
@@ -151,8 +152,8 @@ class _TabletServicesPageState extends State<TabletServicesPage> {
               whatIDoCard(
                   Colors.tealAccent.withOpacity(0.4),
                   Res.mob_dev,
-                  kCardTitle2,
-                  kCardDescription2,
+                  AppLocalization.current.kCardTitle2,
+                  AppLocalization.current.kCardDescription2,
                   width,
                   height,
                   0.3 * width,
@@ -162,8 +163,8 @@ class _TabletServicesPageState extends State<TabletServicesPage> {
               whatIDoCard(
                   Colors.redAccent.withOpacity(0.4),
                   Res.web,
-                  kCardTitle3,
-                  kCardDescription3,
+                  AppLocalization.current.kCardTitle3,
+                  AppLocalization.current.kCardDescription3,
                   width,
                   height,
                   0.3 * width,
@@ -220,24 +221,24 @@ class _MobileServicesPageState extends State<MobileServicesPage> {
             width,
             Colors.yellowAccent.withOpacity(0.4),
             Res.pen,
-            kCardTitle1,
-            kCardDescription1,
+            AppLocalization.current.kCardTitle1,
+            AppLocalization.current.kCardDescription1,
           ),
           whatIdoCardMobile(
             height,
             width,
             Colors.tealAccent.withOpacity(0.4),
             Res.mob_dev,
-            kCardTitle2,
-            kCardDescription2,
+            AppLocalization.current.kCardTitle2,
+            AppLocalization.current.kCardDescription2,
           ),
           whatIdoCardMobile(
             height,
             width,
             Colors.redAccent.withOpacity(0.4),
             Res.web,
-            kCardTitle3,
-            kCardDescription3,
+            AppLocalization.current.kCardTitle3,
+            AppLocalization.current.kCardDescription3,
           ),
           SizedBox(
             height: 30,
@@ -251,7 +252,7 @@ class _MobileServicesPageState extends State<MobileServicesPage> {
 }
 
 Widget whatIDoWidget(double fontSize) {
-  return Text(kWhatIdo,
+  return Text(AppLocalization.current.kWhatIdo,
       style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.w600));
 }
 
@@ -335,7 +336,7 @@ Widget whatIDoCard(
 
 Widget whoIAmWidget(double fontSize) {
   return Text(
-    kWhoIam,
+    AppLocalization.current.kWhoIam,
     style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.w600),
   );
 }
@@ -349,7 +350,7 @@ Widget whoIamDetailsWidget(double spaceAfterCards) {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          kWhoIamDetails,
+          AppLocalization.current.kWhoIamDetails,
           textAlign: TextAlign.left,
           style: TextStyle(
             letterSpacing: 0.5,
@@ -371,7 +372,7 @@ Widget whoIamDetailsWidget(double spaceAfterCards) {
               padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
               color: Colors.red[400],
               child: Text(
-                kDownloadCV,
+                AppLocalization.current.kDownloadCV,
                 style: TextStyle(color: Colors.white),
               ),
               onPressed: () => launchUrl(kCvUrl),

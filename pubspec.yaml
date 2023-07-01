@@ -11,15 +11,32 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   google_fonts: ^5.1.0
   url_launcher: ^6.1.11
   provider: ^6.0.5
   url_strategy: ^0.2.0
+  intl_utils: ^2.8.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  very_good_analysis: ^5.0.0+1
+  flutter_launcher_icons: ^0.13.1
+
+
+flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: true
+  image_path: "assets/icons/logo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/icons/logo.png"
+    background_color: "#ffffff"
+    theme_color: "#fcb7b7"
 
 
 flutter:
@@ -28,3 +45,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+
+flutter_intl:
+  enabled: true
+  class_name: AppLocalization

@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/pages/aboutPage/aboutPage.dart';
-import 'package:portfolio/pages/contactPage/contactPage.dart';
-import 'package:portfolio/pages/navBar/topBar.dart';
-import 'package:portfolio/pages/portfolioPage/portfolioPage.dart';
-import 'package:portfolio/pages/servicePage/servicePage.dart';
+import 'package:portfolio/pages/about_page/about_page.dart';
+import 'package:portfolio/pages/contact_page/contact_page.dart';
+import 'package:portfolio/pages/nav_bar/nav_bar.dart';
+import 'package:portfolio/pages/portfolio_page/portfolio_page.dart';
+import 'package:portfolio/pages/service_page/service_page.dart';
 import 'package:portfolio/providers/utility_provider.dart';
 import 'package:provider/provider.dart';
 
 class PortfolioApp extends StatefulWidget {
+  const PortfolioApp({super.key});
+
   @override
-  _PortfolioAppState createState() => _PortfolioAppState();
+  State<PortfolioApp> createState() => _PortfolioAppState();
 }
 
 class _PortfolioAppState extends State<PortfolioApp> {
@@ -21,8 +23,8 @@ class _PortfolioAppState extends State<PortfolioApp> {
       child: Scaffold(
         body: SingleChildScrollView(
           controller: utilityProvider.getScrollController(),
-          physics: BouncingScrollPhysics(),
-          child: Column(
+          physics: const BouncingScrollPhysics(),
+          child: const Column(
             children: [
               TopNavBar(),
               AboutPage(),

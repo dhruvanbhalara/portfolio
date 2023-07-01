@@ -4,11 +4,11 @@ class UtilityProvider with ChangeNotifier {
   ScrollController scrollController = ScrollController();
   double cardElevation = 30;
 
-  getCardElevation() => cardElevation;
+  double getCardElevation() => cardElevation;
 
-  getScrollController() => scrollController;
+  ScrollController getScrollController() => scrollController;
 
-  changeElevation(double elevation) {
+  void changeElevation(double elevation) {
     cardElevation = elevation;
     notifyListeners();
   }

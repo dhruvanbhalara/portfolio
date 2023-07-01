@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/providers/utility_provider.dart';
 import 'package:portfolio/res.dart';
-import 'package:portfolio/utils/strings.dart';
+import 'package:portfolio/utils/app_constants.dart';
 import 'package:portfolio/widget/social_media_info_widget.dart';
 import 'package:provider/provider.dart';
 

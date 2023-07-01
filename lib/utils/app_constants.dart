@@ -5,7 +5,7 @@ const String kProfileImageURL =
     'https://avatars.githubusercontent.com/u/53393418?s=400&u=d82e097d021946fffca0cbf65109a6c839a53436&v=4';
 
 const String kCvUrl =
-    'https://drive.google.com/file/d/19Rjk4TGHMJyAD838OHn2Qo4twiItyxfg/view?usp=sharing';
+    'https://drive.google.com/file/d/1fiAvaNquixLzfm4ewlX_fKcM4QdlKB_v/view?usp=drive_link';
 
 const String kViewAllWorkLink = 'https://github.com/dhruvanbhalara';
 

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/providers/utility_provider.dart';
 import 'package:provider/provider.dart';
@@ -107,7 +106,7 @@ Widget websiteIcon() {
             padding: const EdgeInsets.all(12),
             child: Text(
               AppLocalization.current.kIconFirstLetter,
-              style: GoogleFonts.poppins(
+              style: const TextStyle(
                 color: Colors.red,
                 fontSize: 30,
                 fontWeight: FontWeight.w600,
@@ -117,7 +116,7 @@ Widget websiteIcon() {
         ),
         Text(
           AppLocalization.current.kIconRemainingLetters,
-          style: GoogleFonts.poppins(
+          style: const TextStyle(
             color: Colors.black,
             fontSize: 25,
             fontWeight: FontWeight.w600,
@@ -176,7 +175,7 @@ Widget navBarOptions(String title, int position, VoidCallback function) {
       child: Text(
         title,
         // style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        style: GoogleFonts.poppins(
+        style: const TextStyle(
           color: Colors.black,
           fontSize: 12,
           fontWeight: FontWeight.w600,

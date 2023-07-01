@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/pages/portfolio_app.dart';
+import 'package:portfolio/providers/utility_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
-
-import 'providers/utility_provider.dart';
 
 void main() {
   setPathUrlStrategy();
@@ -26,7 +25,7 @@ void main() {
           AppLocalization.delegate,
         ],
         supportedLocales: AppLocalization.delegate.supportedLocales,
-        home: PortfolioApp(),
+        home: const PortfolioApp(),
       ),
     ),
   );

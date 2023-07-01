@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/generated/l10n.dart';
-import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/providers/utility_provider.dart';
 import 'package:portfolio/res.dart';
 import 'package:portfolio/utils/strings.dart';
@@ -9,29 +8,35 @@ import 'package:portfolio/widget/social_media_info_widget.dart';
 import 'package:provider/provider.dart';
 
 class ContactPage extends StatelessWidget {
+  const ContactPage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      if (constraints.maxWidth > 1200) {
-        return DesktopContactPage();
-      } else if (constraints.maxWidth > 600 && constraints.maxWidth < 1200) {
-        return TabletContactPage();
-      } else {
-        return MobileContactPage();
-      }
-    });
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        if (constraints.maxWidth > 1200) {
+          return const DesktopContactPage();
+        } else if (constraints.maxWidth > 600 && constraints.maxWidth < 1200) {
+          return const TabletContactPage();
+        } else {
+          return const MobileContactPage();
+        }
+      },
+    );
   }
 }
 
 class DesktopContactPage extends StatefulWidget {
+  const DesktopContactPage({super.key});
+
   @override
-  _DesktopContactPageState createState() => _DesktopContactPageState();
+  State<DesktopContactPage> createState() => _DesktopContactPageState();
 }
 
 class _DesktopContactPageState extends State<DesktopContactPage> {
-  var width;
-  var height;
-  var utilityProvider;
+  double width = 0;
+  double height = 0;
+  late UtilityProvider utilityProvider;
   late ScrollController scrollController;
 
   @override
@@ -40,31 +45,30 @@ class _DesktopContactPageState extends State<DesktopContactPage> {
     height = MediaQuery.of(context).size.height;
     utilityProvider = Provider.of<UtilityProvider>(context);
     scrollController = utilityProvider.getScrollController();
-    return Container(
+    return SizedBox(
       width: width,
       //height: height,
       child: Column(
         //crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.end,
-        mainAxisSize: MainAxisSize.max,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           emailContactWidget(200, 0.6 * width, 18, 35),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           websiteIcon(),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           navBarItems(scrollController),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           iconBarWidget(),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           footerWidget()
@@ -75,14 +79,16 @@ class _DesktopContactPageState extends State<DesktopContactPage> {
 }
 
 class TabletContactPage extends StatefulWidget {
+  const TabletContactPage({super.key});
+
   @override
-  _TabletContactPageState createState() => _TabletContactPageState();
+  State<TabletContactPage> createState() => _TabletContactPageState();
 }
 
 class _TabletContactPageState extends State<TabletContactPage> {
-  var width;
-  var height;
-  var utilityProvider;
+  double width = 0;
+  double height = 0;
+  late UtilityProvider utilityProvider;
   late ScrollController scrollController;
 
   @override
@@ -91,31 +97,30 @@ class _TabletContactPageState extends State<TabletContactPage> {
     height = MediaQuery.of(context).size.height;
     utilityProvider = Provider.of<UtilityProvider>(context);
     scrollController = utilityProvider.getScrollController();
-    return Container(
+    return SizedBox(
       width: width,
       //height: height,
       child: Column(
         //crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.end,
-        mainAxisSize: MainAxisSize.max,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           emailContactWidget(200, 0.8 * width, 18, 28),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           websiteIcon(),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           navBarItems(scrollController),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           iconBarWidget(),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           footerWidget()
@@ -126,14 +131,16 @@ class _TabletContactPageState extends State<TabletContactPage> {
 }
 
 class MobileContactPage extends StatefulWidget {
+  const MobileContactPage({super.key});
+
   @override
-  _MobileContactPageState createState() => _MobileContactPageState();
+  State<MobileContactPage> createState() => _MobileContactPageState();
 }
 
 class _MobileContactPageState extends State<MobileContactPage> {
-  var width;
-  var height;
-  var utilityProvider;
+  double width = 0;
+  double height = 0;
+  late UtilityProvider utilityProvider;
   late ScrollController scrollController;
 
   @override
@@ -142,31 +149,30 @@ class _MobileContactPageState extends State<MobileContactPage> {
     height = MediaQuery.of(context).size.height;
     utilityProvider = Provider.of<UtilityProvider>(context);
     scrollController = utilityProvider.getScrollController();
-    return Container(
+    return SizedBox(
       width: width,
       //height: height,
       child: Column(
         //crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.end,
-        mainAxisSize: MainAxisSize.max,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           emailContactWidget(200, 0.8 * width, 16, 20),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           websiteIcon(),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           navBarItems(scrollController),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           iconBarWidget(),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           footerWidget()
@@ -176,8 +182,12 @@ class _MobileContactPageState extends State<MobileContactPage> {
   }
 }
 
-Widget emailContactWidget(double height, double width, double sayHelloFontSize,
-    double emailIDFontSize) {
+Widget emailContactWidget(
+  double height,
+  double width,
+  double sayHelloFontSize,
+  double emailIDFontSize,
+) {
   return Material(
     elevation: 15,
     color: Colors.white,
@@ -224,7 +234,7 @@ Widget footerWidget() {
         Text(
           AppLocalization.current.kRightsReserved,
           textAlign: TextAlign.center,
-          style: TextStyle(fontWeight: FontWeight.w600, fontSize: 12),
+          style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 12),
         )
       ],
     ),
@@ -232,9 +242,8 @@ Widget footerWidget() {
 }
 
 Widget iconBarWidget() {
-  return Row(
+  return const Row(
     mainAxisAlignment: MainAxisAlignment.center,
-    mainAxisSize: MainAxisSize.max,
     children: [
       SocialMediaInfoWidget(
         iconPath: Res.github,
@@ -276,26 +285,25 @@ Widget websiteIcon() {
   return GestureDetector(
     onTap: () {},
     child: Row(
-      mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.2),
-            border: Border(
+            border: const Border(
               left: BorderSide(width: 2),
               right: BorderSide(width: 2),
               bottom: BorderSide(width: 2),
               top: BorderSide(width: 2),
             ),
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(40),
               topRight: Radius.circular(40),
               bottomRight: Radius.circular(40),
             ),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8),
             child: Text(
               AppLocalization.current.kIconFirstLetter,
               style: GoogleFonts.poppins(
@@ -327,37 +335,37 @@ Widget navBarItems(ScrollController scrollController) {
       navBarOptions(AppLocalization.current.kAbout, 1, () {
         scrollController.animateTo(
           scrollController.position.minScrollExtent + 120,
-          duration: Duration(seconds: 1),
+          duration: const Duration(seconds: 1),
           curve: Curves.ease,
         );
       }),
-      SizedBox(
+      const SizedBox(
         width: 40,
       ),
       navBarOptions(AppLocalization.current.kServices, 2, () {
         scrollController.animateTo(
           0.30 * scrollController.position.maxScrollExtent,
-          duration: Duration(seconds: 2),
+          duration: const Duration(seconds: 2),
           curve: Curves.ease,
         );
       }),
-      SizedBox(
+      const SizedBox(
         width: 40,
       ),
       navBarOptions(AppLocalization.current.kPortfolio, 3, () {
         scrollController.animateTo(
           0.60 * scrollController.position.maxScrollExtent,
-          duration: Duration(seconds: 2),
+          duration: const Duration(seconds: 2),
           curve: Curves.ease,
         );
       }),
-      SizedBox(
+      const SizedBox(
         width: 40,
       ),
       navBarOptions(AppLocalization.current.kContact, 4, () {
         scrollController.animateTo(
           1 * scrollController.position.maxScrollExtent,
-          duration: Duration(seconds: 2),
+          duration: const Duration(seconds: 2),
           curve: Curves.ease,
         );
       }),
@@ -365,18 +373,21 @@ Widget navBarItems(ScrollController scrollController) {
   );
 }
 
-Widget navBarOptions(String title, int position, Function() function) {
+Widget navBarOptions(String title, int position, VoidCallback function) {
   return InkWell(
     onTap: function,
     hoverColor: Colors.grey[200],
     borderRadius: BorderRadius.circular(16),
     child: Container(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
       child: Text(
         title,
         style: GoogleFonts.poppins(
-            color: Colors.black, fontSize: 12, fontWeight: FontWeight.w600),
+          color: Colors.black,
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+        ),
       ),
     ),
   );

@@ -8,8 +8,10 @@ import 'package:portfolio/providers/utility_provider.dart';
 import 'package:provider/provider.dart';
 
 class PortfolioApp extends StatefulWidget {
+  const PortfolioApp({super.key});
+
   @override
-  _PortfolioAppState createState() => _PortfolioAppState();
+  State<PortfolioApp> createState() => _PortfolioAppState();
 }
 
 class _PortfolioAppState extends State<PortfolioApp> {
@@ -21,8 +23,8 @@ class _PortfolioAppState extends State<PortfolioApp> {
       child: Scaffold(
         body: SingleChildScrollView(
           controller: utilityProvider.getScrollController(),
-          physics: BouncingScrollPhysics(),
-          child: Column(
+          physics: const BouncingScrollPhysics(),
+          child: const Column(
             children: [
               TopNavBar(),
               AboutPage(),

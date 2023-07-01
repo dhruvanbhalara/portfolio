@@ -3,16 +3,18 @@ import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/utils/strings.dart';
 
 class AboutPage extends StatelessWidget {
+  const AboutPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth > 1200) {
-          return DesktopAboutMe();
+          return const DesktopAboutMe();
         } else if (constraints.maxWidth > 600 && constraints.maxWidth < 1200) {
-          return TabletAboutMe();
+          return const TabletAboutMe();
         } else {
-          return MobileAboutMe();
+          return const MobileAboutMe();
         }
       },
     );
@@ -20,19 +22,21 @@ class AboutPage extends StatelessWidget {
 }
 
 class DesktopAboutMe extends StatefulWidget {
+  const DesktopAboutMe({super.key});
+
   @override
-  _DesktopAboutMeState createState() => _DesktopAboutMeState();
+  State<DesktopAboutMe> createState() => _DesktopAboutMeState();
 }
 
 class _DesktopAboutMeState extends State<DesktopAboutMe> {
-  var width;
-  var height;
+  double width = 0;
+  double height = 0;
 
   @override
   Widget build(BuildContext context) {
     width = MediaQuery.of(context).size.width;
     height = MediaQuery.of(context).size.height;
-    return Container(
+    return SizedBox(
       height: height * 0.7,
       width: width,
       child: stackedWidgets(height, width),
@@ -41,13 +45,15 @@ class _DesktopAboutMeState extends State<DesktopAboutMe> {
 }
 
 class MobileAboutMe extends StatefulWidget {
+  const MobileAboutMe({super.key});
+
   @override
-  _MobileAboutMeState createState() => _MobileAboutMeState();
+  State<MobileAboutMe> createState() => _MobileAboutMeState();
 }
 
 class _MobileAboutMeState extends State<MobileAboutMe> {
-  var width;
-  var height;
+  double width = 0;
+  double height = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -55,26 +61,26 @@ class _MobileAboutMeState extends State<MobileAboutMe> {
     height = MediaQuery.of(context).size.height;
 
     return Container(
-      padding: EdgeInsets.only(top: 20, left: 20, right: 20),
+      padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
       width: width,
       child: Column(
         children: [
           nameWidget(40, 15),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           // myImageWidget(height / 1.5, width / 2)
-          Container(
+          SizedBox(
             height: 0.6 * height,
             child: ClipRRect(
-              borderRadius: BorderRadius.all(Radius.circular(8)),
+              borderRadius: const BorderRadius.all(Radius.circular(8)),
               child: Image.network(
                 kProfileImageURL,
                 fit: BoxFit.cover,
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
         ],
@@ -84,19 +90,21 @@ class _MobileAboutMeState extends State<MobileAboutMe> {
 }
 
 class TabletAboutMe extends StatefulWidget {
+  const TabletAboutMe({super.key});
+
   @override
-  _TabletAboutMeState createState() => _TabletAboutMeState();
+  State<TabletAboutMe> createState() => _TabletAboutMeState();
 }
 
 class _TabletAboutMeState extends State<TabletAboutMe> {
-  var width;
-  var height;
+  double width = 0;
+  double height = 0;
 
   @override
   Widget build(BuildContext context) {
     width = MediaQuery.of(context).size.width;
     height = MediaQuery.of(context).size.height;
-    return Container(
+    return SizedBox(
       width: width,
       height: height,
       child: tabletViewWidget(width, height),
@@ -107,7 +115,6 @@ class _TabletAboutMeState extends State<TabletAboutMe> {
 //common name and description widget
 Widget nameWidget(double nameFontSize, double descFontSize) {
   return Column(
-    mainAxisAlignment: MainAxisAlignment.start,
     mainAxisSize: MainAxisSize.min,
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -138,10 +145,10 @@ Widget nameWidget(double nameFontSize, double descFontSize) {
 
 //image widget
 Widget myImageWidget(double height, double width) {
-  return Container(
+  return SizedBox(
     height: 0.5 * height,
     child: ClipRRect(
-      borderRadius: BorderRadius.all(Radius.circular(10)),
+      borderRadius: const BorderRadius.all(Radius.circular(10)),
       child: Image.network(
         kProfileImageURL,
         fit: BoxFit.cover,
@@ -235,11 +242,11 @@ Widget tabletViewWidget(double width, double height) {
     child: Column(
       children: [
         nameWidget(50, 20),
-        SizedBox(
+        const SizedBox(
           height: 60,
         ),
         myImageWidget(height / 1, width / 2),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
       ],

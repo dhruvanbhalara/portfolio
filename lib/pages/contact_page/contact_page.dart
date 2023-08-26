@@ -70,7 +70,7 @@ class _DesktopContactPageState extends State<DesktopContactPage> {
           const SizedBox(
             height: 60,
           ),
-          footerWidget()
+          footerWidget(),
         ],
       ),
     );
@@ -122,7 +122,7 @@ class _TabletContactPageState extends State<TabletContactPage> {
           const SizedBox(
             height: 60,
           ),
-          footerWidget()
+          footerWidget(),
         ],
       ),
     );
@@ -174,7 +174,7 @@ class _MobileContactPageState extends State<MobileContactPage> {
           const SizedBox(
             height: 60,
           ),
-          footerWidget()
+          footerWidget(),
         ],
       ),
     );
@@ -234,7 +234,7 @@ Widget footerWidget() {
           AppLocalization.current.kRightsReserved,
           textAlign: TextAlign.center,
           style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 12),
-        )
+        ),
       ],
     ),
   );

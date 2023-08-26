@@ -55,7 +55,7 @@ class _DesktopPortfolioPageState extends State<DesktopPortfolioPage> {
           const SizedBox(
             height: 60,
           ),
-          viewAllWorkButtonWidget()
+          viewAllWorkButtonWidget(),
         ],
       ),
     );
@@ -95,7 +95,7 @@ class _TabletPortfolioPageState extends State<TabletPortfolioPage> {
           const SizedBox(
             height: 60,
           ),
-          viewAllWorkButtonWidget()
+          viewAllWorkButtonWidget(),
         ],
       ),
     );
@@ -138,7 +138,7 @@ class _MobilePortfolioPageState extends State<MobilePortfolioPage> {
           const SizedBox(
             height: 20,
           ),
-          viewAllWorkButtonWidget()
+          viewAllWorkButtonWidget(),
         ],
       ),
     );

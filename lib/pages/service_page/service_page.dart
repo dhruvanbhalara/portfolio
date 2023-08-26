@@ -105,9 +105,9 @@ class _DesktopServicesPageState extends State<DesktopServicesPage> {
               const SizedBox(
                 height: 30,
               ),
-              whoIamDetailsWidget(80)
+              whoIamDetailsWidget(80),
             ],
-          )
+          ),
         ],
       ),
     );
@@ -259,7 +259,7 @@ class _MobileServicesPageState extends State<MobileServicesPage> {
           const SizedBox(
             height: 30,
           ),
-          whoIamDetailsWidget(30)
+          whoIamDetailsWidget(30),
         ],
       ),
     );

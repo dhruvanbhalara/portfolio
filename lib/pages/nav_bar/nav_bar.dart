@@ -76,7 +76,7 @@ class _MobileNavBarState extends State<MobileNavBar> {
         const SizedBox(
           height: 20,
         ),
-        navBarItems(scrollController)
+        navBarItems(scrollController),
       ],
     );
   }

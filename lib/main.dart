@@ -14,7 +14,7 @@ void main() {
       providers: [
         ChangeNotifierProvider<UtilityProvider>(
           create: (_) => UtilityProvider(),
-        )
+        ),
       ],
       child: MaterialApp(
         onGenerateTitle: (context) => AppLocalization.current.appName,

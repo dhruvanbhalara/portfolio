@@ -11,7 +11,7 @@ const String kViewAllWorkLink = 'https://github.com/dhruvanbhalara';
 
 const String kWorkImageUrl = Res.comingsoon;
 
-const String kEmail = 'dhruvan2912@gmail.com';
+const String kEmail = 'dhruvan2912@yahoo.com';
 
 //final social Links
 const String kLinkedInURL = 'https://www.linkedin.com/in/dhruvanbhalara/';

@@ -29,6 +29,9 @@ jobs:
         with:
           channel: 'stable'
           cache: true
+        
+      - name: Disbale analytics of flutter
+        run: flutter config --no-analytics
 
       - name: Install pub Dependencies
         run: flutter pub get

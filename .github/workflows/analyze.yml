@@ -22,16 +22,22 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
           cache: true
+        
+      - name: Disbale analytics of flutter
+        run: flutter config --no-analytics
 
       - name: Install pub Dependencies
         run: flutter pub get
+
+      - name: Update dart packages
+        run: dart pub upgrade
 
       - name: Activate intl
         run: flutter pub global activate intl_utils

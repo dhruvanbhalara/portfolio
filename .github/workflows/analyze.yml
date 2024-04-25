@@ -36,15 +36,6 @@ jobs:
       - name: Install pub Dependencies
         run: flutter pub get
 
-      - name: Update dart packages
-        run: dart pub upgrade
-
-      - name: Activate intl
-        run: flutter pub global activate intl_utils
-
-      - name: Generate localization files
-        run: flutter pub global run intl_utils:generate
-
       - name: Check for any formatting issues in the code.
         run: dart format --set-exit-if-changed lib/
 

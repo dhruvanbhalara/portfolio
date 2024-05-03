@@ -49,7 +49,7 @@ jobs:
         run: flutter build web
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.1
+        uses: nwtgck/actions-netlify@v3.0
         with:
           publish-dir: './build/web'
           production-branch: master

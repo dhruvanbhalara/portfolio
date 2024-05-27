@@ -9,9 +9,9 @@ import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 void main() {
-  setPathUrlStrategy();
-  WidgetsFlutterBinding.ensureInitialized();
   runZonedGuarded(() {
+    setPathUrlStrategy();
+    WidgetsFlutterBinding.ensureInitialized();
     runApp(
       MultiProvider(
         providers: [

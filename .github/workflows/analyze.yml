@@ -30,8 +30,6 @@ jobs:
           channel: stable
           flutter-version: 3.19.6
           cache: true
-          cache-key: 'flutter-:os:-:channel:-:version:-:arch:-:hash:'
-          cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:"
         
       - name: Disbale analytics of flutter
         run: flutter config --no-analytics

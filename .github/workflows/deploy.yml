@@ -43,9 +43,6 @@ jobs:
       - name: Statically analyze the Dart code for any errors.
         run: dart analyze lib/
 
-      - name: Statically analyze the Dart code for any errors.
-        run: dart analyze lib/
-
       - name: Build web app
         run: flutter build web
 
